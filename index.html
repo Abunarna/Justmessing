@@ -6,7 +6,8 @@
     <title>Click for Words...</title>
     <style>
         body {
-            background-color: black;
+            background-image: radial-gradient(circle at top right, #000, #333);
+            background-repeat: no-repeat;
             color: white;
             font-family: sans-serif;
             display: flex;
@@ -20,7 +21,7 @@
     <h1 id="message">Hello</h1>
     <script>
         const messageElement = document.getElementById('message');
-        const textSequence = ["Hello...", "there", "Jamey", "I", "Am", "using", "robots", "to", "make", "crap", "internet."];
+        const textSequence = ["Hello", "there", "Jamey", "I", "Am", "using", "robots", "to", "make", "crap", "internet."];
         let currentIndex = 0;
 
         document.addEventListener('click', () => {
@@ -28,7 +29,6 @@
                 currentIndex++;
                 messageElement.textContent = textSequence[currentIndex];
             } else {
-                // Reset sequence on final click
                 currentIndex = 0;
                 messageElement.textContent = textSequence[currentIndex];
             }
@@ -36,3 +36,4 @@
     </script>
 </body>
 </html>
+
