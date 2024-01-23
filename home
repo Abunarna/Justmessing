@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello!</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // This script is optional if you're happy with the static text above.
+        // It dynamically changes the text content with JavaScript.
+        const messageElement = document.createElement('h1');
+        messageElement.textContent = 'Hello!';
+        document.body.appendChild(messageElement);
+    </script>
+</body>
+</html>
