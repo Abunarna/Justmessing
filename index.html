@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello!</title>
+    <title>Click for Words...</title>
     <style>
         body {
             background-color: black;
@@ -17,13 +17,21 @@
     </style>
 </head>
 <body>
-    <h1 id="message">Hello!</h1>
+    <h1 id="message">Hello</h1>
     <script>
         const messageElement = document.getElementById('message');
+        const textSequence = ["Hello...", "there", "Jamey", "I", "Am", "using", "robots", "to", "make", "crap", "internet."];
+        let currentIndex = 0;
 
         document.addEventListener('click', () => {
-            // Toggle the text between "Hello" and "There" on each click
-            messageElement.textContent = messageElement.textContent === 'Hello!' ? 'There!' : 'Hello!';
+            if (currentIndex < textSequence.length - 1) {
+                currentIndex++;
+                messageElement.textContent = textSequence[currentIndex];
+            } else {
+                // Reset sequence on final click
+                currentIndex = 0;
+                messageElement.textContent = textSequence[currentIndex];
+            }
         });
     </script>
 </body>
